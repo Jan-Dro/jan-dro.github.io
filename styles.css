@@ -133,23 +133,37 @@ nav ul{
 
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
     body {
         font-size: 14px;
+    }
+    .card{
+      margin: 2px 0;
     }
     
     .burger-menu {
         display: block; /* Show burger menu on small screens */
     }
 
+    .typing-demo {
+      /* width: 22ch;
+      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace; */
+      font-size: 14px;
+    }
+
     .container {
         display: flex;
         flex-direction: column; /* Stack cards vertically on small screens */
-        align-items: center; /* Center cards horizontally on small screens */
+        align-items: center;
+        max-width: 500px; /* Center cards horizontally on small screens */
     }
 
     .card {
-        margin: 10px 0; /* Add some spacing between the cards */
+        margin: 5px 0; /* Add some spacing between the cards */
     }
 
     .card:not(:first-child) {
