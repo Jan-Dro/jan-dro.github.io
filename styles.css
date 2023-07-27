@@ -75,7 +75,7 @@ nav ul{
     transition: 0.9s ease-out;
     position: relative;
     left: 0px;
-    transition: transfrom 0.9s ease out, z-index 0.4s ease-out;  
+    transition: transform 0.9s ease-out, z-index 0.4s ease-out;
   }
   
   .card.expanded:hover{
@@ -139,8 +139,9 @@ nav ul{
   }
 
   .card {
+    width: fit-content;
     width: calc(100% - 40px);
-    max-width: 150px;
+    max-width: 135px;
     position: relative;
     z-index: 1;
   }
@@ -155,16 +156,22 @@ nav ul{
 
   .typing-demo {
     font-size: 25px;
-    padding-top: 30%;
     position: relative;
-    z-index: 4;
+    /* z-index: 4; */
   }
 
   .container {
-    padding-left: 20vw;
-    top: 50vh;
-    max-width: 100%;
+    padding-left: 30vw;
+    /* top: 50vh; */
+    max-width: 80%;
     position: relative;
     z-index: 1;
   }
+  .wrapper{
+    margin-top: -95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
