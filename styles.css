@@ -1,0 +1,132 @@
+body{
+    background-color: #100e17;
+    color: whitesmoke
+}
+nav{
+    position: sticky;
+    top: 0;
+    right:0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+
+}
+.burger-menu{
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+nav ul{
+    display: flex;
+    gap: 1.9rem;
+    color: antiquewhite
+}
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 60px;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  .container {
+    position:absolute;
+    height: 300px;
+    width: 600px;
+    left: calc(50% - 300px);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card {
+    display: flex;
+    height: 40vh;
+    width: 20vw;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.9s ease-out;
+    position: relative;
+    left: 0px;
+    transition: transfrom 0.9s ease out, z-index 0.4s ease-out;  
+  }
+  
+  .card.expanded:hover{
+    transform: none;
+  }
+
+  .card:not(:first-child) {
+      margin-left: -15vw;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+    z-index: 1;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+
+  .card.expanded:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  .content, .nav-link{
+    color:#9a9a9a;
+    margin-top: 10vh;
+  }
+
+  a:link, a:visited {
+    color: white;
+
+  }
