@@ -1,7 +1,9 @@
-body{
-    background-color: #100e17;
-    color: whitesmoke
+body {
+  background-color: #100e17;
+  color: whitesmoke;
+  font-size: 16px;
 }
+
 nav{
     position: sticky;
     top: 0;
@@ -133,6 +135,24 @@ nav ul{
 
   @media screen and (max-width: 768px) {
     body {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
+    
+    .burger-menu {
+        display: block; /* Show burger menu on small screens */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards horizontally on small screens */
+    }
+
+    .card {
+        margin: 10px 0; /* Add some spacing between the cards */
+    }
+
+    .card:not(:first-child) {
+        margin-left: 0; /* Remove negative margin for the first card */
+    }
+}
