@@ -10,14 +10,27 @@
 //   });
 // });
 const cards = document.querySelectorAll('.card');
+let touchStartTime, touchEndTime;
 
-// Function to handle the click and touch events
 function handleCardInteraction(card) {
   card.classList.toggle('expanded');
 }
 
-// Add click and touch event listeners to each stack card
+function onTouchStart(event, card) {
+  touchStartTime = new Date().getTime();
+  handleCardInteraction(card);
+}
+
+function onTouchEnd(event) {
+  touchEndTime = new Date().getTime();
+  const touchDuration = touchEndTime - touchStartTime;
+  if (touchDuration < 300) {
+    event.preventDefault();
+  }
+}
+
 cards.forEach(card => {
   card.addEventListener('click', () => handleCardInteraction(card));
-  card.addEventListener('touchstart', () => handleCardInteraction(card));
+  card.addEventListener('touchstart', (event) => onTouchStart(event, card));
+  card.addEventListener('touchend', onTouchEnd);
 });
