@@ -31,6 +31,10 @@ function onTouchEnd(event) {
 
 cards.forEach(card => {
   card.addEventListener('click', () => handleCardInteraction(card));
+});
+
+cards.forEach(card => {
+  card.addEventListener('click', () => handleCardInteraction(card));
   card.addEventListener('touchstart', (event) => onTouchStart(event, card));
   card.addEventListener('touchend', onTouchEnd);
 });
