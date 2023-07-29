@@ -143,7 +143,9 @@ nav ul{
     color: white;
 
   }
-
+  .card.expanded .info-slide {
+    height: 300px;
+  }
 @media screen and (max-width: 500px) {
   body {
     font-size: 14px;
@@ -194,5 +196,7 @@ nav ul{
     max-height: calc(100vh - 6rem);
   }
 
-
+  .card.expanded .info-slide {
+    height: 300px;
+  }
 }
