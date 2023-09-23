@@ -183,7 +183,7 @@ nav ul{
     align-items: center;
   }
   .card.expanded {
-    flex: 0 0 100vw;
+    flex: 0 0 50vw;
     transform: translateY(-20px); 
     z-index: 1;
     box-shadow: -1rem 0 3rem #000;
