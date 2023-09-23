@@ -198,5 +198,6 @@ nav ul{
 
   .card.expanded .info-slide {
     height: 300px;
+    touch-action: manipulation;
   }
 }
