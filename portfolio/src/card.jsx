@@ -35,4 +35,3 @@ function Card({ title, content }) {
 }
 
 export default Card;
-export default Card;
