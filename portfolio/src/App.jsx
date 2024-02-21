@@ -17,7 +17,12 @@ function App() {
         />
         <Card
           title="Projects"
-          content={[<p>Check out my <a href="https://github.com/Jan-Dro" className="link">Github!</a></p>]}
+          content={[
+            <p>Check out my <a href="https://github.com/Jan-Dro" className="link">Github!</a></p>,
+            <p><a href="https://github.com/Jan-Dro/Sugoi_Samurai" className="link">Sugoi Samurai</a></p>,
+            <p><a href="https://github.com/Jan-Dro/samurAI-stocks/" className="link">Samurai Stock</a></p>,
+            <p><a href="https://github.com/Jan-Dro/marketplaceAPI" className="link">Marketplace API</a></p>,
+          ]}
         />
         <Card
           title="About Me!"
